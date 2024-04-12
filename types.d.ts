@@ -1,5 +1,9 @@
 type Order = 'end' | 'normal';
 
+interface TypingEffectProps {
+  text: string;
+}
+
 interface ChildrenProps {
   children: React.ReactNode;
 }
@@ -151,6 +155,7 @@ interface TiddlerBaseMetadata {
   tags: string;
   description: string;
   ['page-cover']: string;
+  summary: string;
 }
 
 interface TiddlerVanillaMetadata extends TiddlerBaseMetadata {

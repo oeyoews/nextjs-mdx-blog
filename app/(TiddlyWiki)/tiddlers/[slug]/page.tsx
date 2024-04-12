@@ -1,6 +1,7 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import Summary from '~components/Summary';
 
 import clsx from 'clsx';
 import { Article, Divider, H1 } from '~components/ArticleComponents';
@@ -42,7 +43,7 @@ export default async function Page({ params }: { params: Params }) {
     notFound();
   }
 
-  const { title, text, 'page-cover': pageCover } = tiddler;
+  const { title, text, 'page-cover': pageCover, summary } = tiddler;
 
   return (
     <Article>
@@ -58,6 +59,8 @@ export default async function Page({ params }: { params: Params }) {
         />
       )}
       <H1>{formatTitle(title)}</H1>
+
+      {summary && <Summary text={summary} />}
       <Divider />
       <MarkdownItRenderer content={text} />
     </Article>

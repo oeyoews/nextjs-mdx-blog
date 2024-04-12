@@ -10,6 +10,7 @@ import MDX from '~components/Mdx';
 import PasswordProtectedContent from '~components/PasswordPost';
 import Spinner from '~components/Spinner';
 import { getBlogPosts, getPostFromParams } from '~lib/blog';
+import Summary from '~components/Summary';
 
 export const generateMetadata = ({ params }: { params: Params }): Metadata => {
   const post = getPostFromParams(params.slug);
@@ -34,6 +35,7 @@ const PostPage = ({ params }: { params: Params }) => {
     <PasswordProtectedContent post={post}>
       <Article>
         <H1>{post.metadata.title}</H1>
+        {post.metadata.summary && <Summary text={post.metadata.summary!} />}
         <Divider />
         {post.content ? (
           <Suspense fallback={<Spinner center />}>
