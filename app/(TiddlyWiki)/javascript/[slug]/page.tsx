@@ -8,6 +8,7 @@ import MarkdownItRenderer from '~components/MarkdownIt';
 import config from '~config';
 import formatTitle from '~lib/formatTitle';
 import getTiddlerData from '~lib/getTiddlerData';
+import Summary from '~components/Summary';
 
 async function getTiddler(slug: string) {
   const { tiddlers } = await getTiddlerData(config.jsJson);
@@ -43,7 +44,7 @@ export default async function Page({ params }: { params: Params }) {
     notFound();
   }
 
-  const { title, text, 'page-cover': pageCover } = tiddler;
+  const { summary, title, text, 'page-cover': pageCover } = tiddler;
 
   return (
     <Article>
@@ -59,6 +60,8 @@ export default async function Page({ params }: { params: Params }) {
         />
       )}
       <H1>{formatTitle(title)}</H1>
+
+      {summary && <Summary text={summary} />}
       <Divider />
       <MarkdownItRenderer content={text} />
     </Article>
