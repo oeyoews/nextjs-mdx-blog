@@ -3,6 +3,7 @@ import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import Link from 'next/link';
 import Summary from '~components/Summary';
+import AvatarMotion from '~components/AvatarMotion';
 
 // ui: https://lutaonan.com/
 const Page = () => {
@@ -11,14 +12,9 @@ const Page = () => {
       {/* <div className="text-center sm:px-48 lg:my-24 py-24"> */}
       <div className="text-center mx-20 lg:my-20">
         <div className="sticky top-5 flex flex-col gap-4">
-          <div
-            className="size-32 bg-cover bg-center rounded-full inline-block mx-auto"
-            style={{
-              backgroundImage: 'url(/oeyoews.jpeg)'
-            }}
-          ></div>
+          <AvatarMotion />
           <div>
-            <h1 className="font-bold text-2xl">oeyoews</h1>
+            <h1 className="font-bold text-xl font-serif">oeyoews</h1>
           </div>
           <div className="flex gap-4 justify-center">
             <a target="_blank" href="https://twitter.com/oeyoews">

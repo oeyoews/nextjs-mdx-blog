@@ -1,7 +1,6 @@
 import GithubIssueList from '~components/GitHubIssue/GithubIssueList';
 import { getAllIssues } from '~lib/issues/getIssues';
 import Summary from '~components/Summary';
-import { Divider } from '~components/ArticleComponents';
 
 export const metadata = {
   title: 'issues',

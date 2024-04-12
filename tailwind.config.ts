@@ -17,6 +17,9 @@ export default {
   },
   theme: {
     extend: {
+      backgroundImage: {
+        'avatar-oeyoews': "url('/oeyoews.jpeg')"
+      },
       colors: {
         dimmed: {
           100: '#cdd9e5',
