@@ -10,7 +10,7 @@ export default function AvatarMotion() {
 
   const handleClick = () => {
     setAnimationKey((prevKey) => prevKey + 1);
-    toast.success('在 GitHub 了解更多', {
+    toast.success('在 GitHub 上了解我更多', {
       action: {
         label: '确认',
         onClick: () => {
