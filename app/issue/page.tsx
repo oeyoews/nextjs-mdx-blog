@@ -18,7 +18,7 @@ export default async function IssueComponent() {
   return (
     <>
       <Summary text="GitHub Issue" header="Issues" />
-      <GithubIssueList issues={issues} />;
+      <GithubIssueList issues={issues} />
     </>
   );
 }

@@ -20,7 +20,7 @@ const HomePage = () => {
         text="个人博客, 记录一下, 信马由缰，随心所欲式写法"
         header="博客"
       />
-      <BlogList data={posts} route="/blog" />;
+      <BlogList data={posts} route="/blog" />
     </>
   );
 };
