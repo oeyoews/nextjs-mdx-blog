@@ -1,6 +1,6 @@
 'use client';
 
-import { Toaster, toast } from 'sonner';
+import { toast } from 'sonner';
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -22,7 +22,6 @@ export default function AvatarMotion() {
 
   return (
     <>
-      <Toaster />
       <motion.div
         key={animationKey}
         className="size-24 shadow-md bg-cover outline outline-dimmed-100/80 dark:outline-dimmed-200 bg-center rounded-full inline-block mx-auto bg-avatar-oeyoews cursor-pointer"

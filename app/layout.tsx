@@ -1,5 +1,6 @@
-import { Toaster } from 'react-hot-toast';
+// import { Toaster } from 'react-hot-toast';
 
+import { Toaster } from 'sonner';
 import type { Metadata, Viewport } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 
@@ -48,11 +49,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {/* <div className="absolute inset-x-0 top-0 -z-10 m-auto size-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div> */}
         </div>
 
-        <Toaster
+        <Toaster duration={1500} />
+        {/* <Toaster
           toastOptions={{
             duration: 1000
           }}
-        />
+        /> */}
         <Providers>
           {/* <MermaidScript /> */}
           <NextTopLoader
