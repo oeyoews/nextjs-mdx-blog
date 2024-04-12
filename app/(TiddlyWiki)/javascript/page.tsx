@@ -1,3 +1,5 @@
+import { Divider } from '~components/ArticleComponents';
+import Summary from '~components/Summary';
 import TiddlersList from '~components/TiddlyWiki/TiddlersList';
 import config from '~config';
 import getTiddlerData from '~lib/getTiddlerData';
@@ -14,5 +16,13 @@ export default async function TiddlersHomepage({
 }) {
   const { tiddlersMetadata } = await getTiddlerData(config.jsJson);
 
-  return <TiddlersList tiddlers={tiddlersMetadata} route="/javascript" />;
+  return (
+    <>
+      <Summary
+        text="此页面是 TiddlyWiki Starter Kit 的 所有 JavaScript tiddlers"
+        header="JavaScript"
+      />
+      <TiddlersList tiddlers={tiddlersMetadata} route="/javascript" />
+    </>
+  );
 }

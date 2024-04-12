@@ -2,6 +2,9 @@ type Order = 'end' | 'normal';
 
 interface TypingEffectProps {
   text: string;
+  header?: string
+  blink?: boolean
+  speed?: number
 }
 
 interface ChildrenProps {

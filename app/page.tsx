@@ -2,6 +2,7 @@ import { SiTiddlywiki } from 'react-icons/si';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import Link from 'next/link';
+import Summary from '~components/Summary';
 
 // ui: https://lutaonan.com/
 const Page = () => {
@@ -37,7 +38,7 @@ const Page = () => {
         </div>
       </div>
       {/* right */}
-      <div className="lg:my-20 mx-6">
+      <div className="lg:my-20 mx-6 lg:w-full">
         <div>
           <div className="mx-auto text-sm">
             <div>
@@ -49,8 +50,13 @@ const Page = () => {
               <Link href={'/blog'}>文章</Link>
             </div>
             <h2 className="font-bold my-4 text-md">ABOUT / 关于我</h2>
-            <div className="text-gray-400">
-              这个人很懒，什么也没留下 (coming ...)
+            <div className="w-full">
+              <Summary
+                text="这个人很懒，什么也没留下."
+                header="个人介绍"
+                blink={true}
+                speed={50}
+              />
             </div>
           </div>
         </div>
