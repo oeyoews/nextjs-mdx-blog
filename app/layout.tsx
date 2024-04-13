@@ -59,9 +59,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {/* <MermaidScript /> */}
           <NextTopLoader
             color="#eb6864"
-            height={1}
+            height={3}
             shadow={false}
-            showSpinner={false}
+            // showAtBottom={true}
+            showSpinner={true}
           />
           <Nav />
           <main className="container mx-auto max-w-4xl py-8 px-4">
