@@ -12,7 +12,7 @@ export default function AvatarMotion() {
     setAnimationKey((prevKey) => prevKey + 1);
     toast.success('在 GitHub 上了解我更多', {
       action: {
-        label: '确认',
+        label: '前往',
         onClick: () => {
           window.open('https://github.com/oeyoews', '_blank');
         }
