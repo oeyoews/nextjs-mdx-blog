@@ -4,11 +4,15 @@ import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import Link from 'next/link';
 import Summary from '~components/Summary';
 import AvatarMotion from '~components/AvatarMotion';
+import { headers } from 'next/headers';
 
 // ui: https://lutaonan.com/
 const Page = () => {
+  // const ip = headers().get('x-forwarded-for')
+  // const demo = headers().get('x-real-ip')
   return (
     <div className="lg:flex">
+      {/* ip : {ip} {demo} */}
       {/* <div className="text-center sm:px-48 lg:my-24 py-24"> */}
       <div className="text-center mx-20 lg:my-20">
         <div className="sticky top-5 flex flex-col gap-4">
