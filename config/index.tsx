@@ -4,11 +4,23 @@ import { IoJournalOutline } from 'react-icons/io5';
 import { SiTiddlywiki } from 'react-icons/si';
 import { TbArticle } from 'react-icons/tb';
 import { RiJavascriptFill } from 'react-icons/ri';
+import { ReactElement } from 'react';
 
 const testFile = 'http://localhost:3000/tiddlers.json';
 
+interface IRouteItem<T> {
+  title: string;
+  path: T ;
+  icon: ReactElement;
+  disable?: boolean;
+}
+
+function defineRoutes<T extends string>(routes: IRouteItem<T>[]) {
+  return  routes
+}
+
 // TODO: disable type is missing with as const
-const routes = [
+const routes = defineRoutes([
   {
     title: 'Home',
     path: '/',
@@ -41,7 +53,7 @@ const routes = [
     path: '/issue',
     icon: <TfiThought />
   }
-] as const;
+])
 
 const config = {
   emptyTip: '这里空空如也 !',
