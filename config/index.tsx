@@ -8,14 +8,17 @@ import { ReactElement } from 'react';
 
 const testFile = 'http://localhost:3000/tiddlers.json';
 
+// 检查是否为路径
+type IsPath<T> = T extends `/${string}` ? T : never;
+
 interface IRouteItem<T> {
   title: string;
-  path: T ;
+  path: IsPath<T>;
   icon: ReactElement;
   disable?: boolean;
 }
 
-function defineRoutes<T extends string>(routes: IRouteItem<T>[]) {
+function defineRoutes<T extends string>(routes: IRouteItem<T>[]): IRouteItem<T>[] {
   return  routes
 }
 
@@ -52,7 +55,7 @@ const routes = defineRoutes([
     title: 'issues',
     path: '/issue',
     icon: <TfiThought />
-  }
+  },
 ])
 
 const config = {
