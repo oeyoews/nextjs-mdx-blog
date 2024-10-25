@@ -47,7 +47,7 @@ const Summary = ({
 
   return (
     // displayText &&
-    <div className="gap-2 border-solid border p-4 rounded border-dimmed-200 dark:border-dimmed-700 dark:bg-dimmed-800 dark:text-white mb-4 text-sm antialiased">
+    (<div className="gap-2 border-solid border p-4 rounded border-dimmed-200 dark:border-dimmed-700 dark:bg-dimmed-800 dark:text-white mb-4 text-sm antialiased">
       <div className="mb-2 flex items-center gap-2">
         <CiText />
         <span>{header}</span>
@@ -56,7 +56,7 @@ const Summary = ({
         <span className="">{displayText}</span>
         {dotVisible && <span>●</span>}
       </div>
-    </div>
+    </div>)
   );
 };
 

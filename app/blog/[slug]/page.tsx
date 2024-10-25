@@ -12,7 +12,8 @@ import Spinner from '~components/Spinner';
 import { getBlogPosts, getPostFromParams } from '~lib/blog';
 import Summary from '~components/Summary';
 
-export const generateMetadata = ({ params }: { params: Params }): Metadata => {
+export const generateMetadata = async (props: { params: Promise<Params> }): Promise<Metadata> => {
+  const params = await props.params;
   const post = getPostFromParams(params.slug);
   return {
     title: post?.metadata.title
@@ -24,7 +25,8 @@ export const generateStaticParams = () => {
   return posts.map((posts) => ({ slug: posts.slug }));
 };
 
-const PostPage = ({ params }: { params: Params }) => {
+const PostPage = async (props: { params: Promise<Params> }) => {
+  const params = await props.params;
   const post = getPostFromParams(params.slug);
 
   if (!post) {

@@ -1,4 +1,7 @@
 import { Config } from 'tailwindcss';
+// const { iconsPlugin, getIconCollections } = require("@egoist/tailwindcss-icons")
+import {iconsPlugin, getIconCollections} from '@egoist/tailwindcss-icons'
+
 
 export default {
   darkMode: 'media', // media support dark default ???
@@ -53,5 +56,10 @@ export default {
       })
     }
   },
-  plugins: [require('@tailwindcss/typography')]
+
+  plugins: [require('@tailwindcss/typography'),
+     iconsPlugin({
+      collections: getIconCollections(["lucide"]),
+    }),
+  ]
 } satisfies Config;

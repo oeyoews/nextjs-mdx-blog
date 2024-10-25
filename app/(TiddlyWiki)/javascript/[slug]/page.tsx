@@ -15,11 +15,12 @@ async function getTiddler(slug: string) {
   return tiddlers.find((tiddler) => tiddler.slug === slug);
 }
 
-export async function generateMetadata({
-  params
-}: {
-  params: Params;
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<Params>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const { slug } = params;
   const tiddler = await getTiddler(slug);
   return {
@@ -36,7 +37,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page(props: { params: Promise<Params> }) {
+  const params = await props.params;
   const { slug } = params;
   const tiddler = await getTiddler(slug);
 
