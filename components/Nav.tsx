@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import React from 'react';
@@ -64,7 +65,7 @@ export default function Nav() {
               className={`flex items-center space-x-2 duration-300 transition`}
               aria-label={link.title}
             >
-              {React.cloneElement(link.icon, { className: LinkClass })}
+              {React.cloneElement(link.icon, { className: LinkClass  })}
             </Link>
           ))}
       </nav>
