@@ -37,7 +37,7 @@ export default function Meteors() {
 	};
 
 	return (
-		<div className="absolute w-full h-screen overflow-hidden">
+		<div className="absolute w-full h-screen overflow-hidden z-[-1]">
 			{createMeteorElements()}
 		</div>
 	);
