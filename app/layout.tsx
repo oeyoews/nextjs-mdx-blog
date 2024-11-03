@@ -1,5 +1,4 @@
 // import { Toaster } from 'react-hot-toast';
-
 import { Toaster } from 'sonner';
 import type { Metadata, Viewport } from 'next';
 import NextTopLoader from 'nextjs-toploader';
