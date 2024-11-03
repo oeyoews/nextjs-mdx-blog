@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+
   /* iconify patch */
   svg {
     display: inline;
   }
+
   h1,
   h2 {
     text-wrap: 'text-balance';
@@ -17,8 +19,7 @@
   }
 }
 
-@layer components {
-}
+@layer components {}
 
 /* 在全屏状态下隐藏元素 */
 /* .nav:-webkit-full-screen {
@@ -41,9 +42,11 @@
   0% {
     transform: scale(0) rotate(0deg);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0) rotate(180deg);
   }
@@ -75,7 +78,7 @@
   content: '#';
 }
 
-.prose *:hover > .anchor {
+.prose *:hover>.anchor {
   @apply visible;
 }
 
@@ -89,4 +92,24 @@ table {
 
 table svg {
   margin-right: 0.2em;
+}
+
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(215deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+.animate-meteor {
+  animation: meteor 5s linear infinite;
 }
