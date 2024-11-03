@@ -6,10 +6,9 @@ export default function Meteors() {
 	const [isClient, setIsClient] = useState(false);
 	const meteorCount = 20;
 
-	// useEffect(() => {
-	// 	setIsClient(true);
-	// }, []);
-
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
 
 	const getRandomPosition = (max: number): string => `${Math.floor(Math.random() * max)}px`;
 	const getRandomDelay = (): string => `${(Math.random() * 1 + 0.2).toFixed(2)}s`;
