@@ -8,13 +8,17 @@ const nextConfig = {
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
   reactStrictMode: false,
-  async redirects() {
+  async rewrites() {
     return [
-      // {
-      //   source: '/',
-      //   destination: '/blog',
-      //   permanent: true,
-      // },
+      {
+        source: '/s/tskpl',
+        destination: 'https://neotw.vercel.app/docs',
+      },
+      {
+        source: '/s/oeyoews',
+        destination: 'https://github.com/oeyoews',
+        // permanent: false,
+      },
     ];
   },
   images: {
