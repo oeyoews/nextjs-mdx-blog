@@ -1,15 +1,24 @@
+'use client'
+
 import { SiTiddlywiki } from 'react-icons/si';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import Link from 'next/link';
 import Summary from '~components/Summary';
 import AvatarMotion from '~components/AvatarMotion';
+import ConfirmButton from '~components/ConfirmButton';
 // import { headers } from 'next/headers';
 
 // ui: https://lutaonan.com/
 const Page = () => {
   // const ip = headers().get('x-forwarded-for')
   // const demo = headers().get('x-real-ip')
+  const links = {
+    x: ["https://x.com/oeyoews", FaTwitter],
+    github: ['https://github.com/oeyoews', FaGithub],
+    tw: ['https://neotw.vercel.app', SiTiddlywiki],
+    email: ["mailto:jyao4783@gmail.com", MdOutlineMarkEmailUnread]
+  } as const
   return (
     <div className="lg:flex">
       {/* ip : {ip} {demo} */}
@@ -21,18 +30,8 @@ const Page = () => {
             <h1 className="font-bold text-xl font-serif">oeyoews</h1>
           </div>
           <div className="flex gap-4 justify-center">
-            <a target="_blank" href="https://twitter.com/oeyoews">
-              <FaTwitter className="size-5" />
-            </a>
-            <a target="_blank" href="https://github.com/oeyoews">
-              <FaGithub className="size-5" />
-            </a>
-            <a target="_blank" href="https://neotw.vercel.app">
-              <SiTiddlywiki className="size-5" />
-            </a>
-            <a target="_blank" href="mailto:jyao4783@gmail.com">
-              <MdOutlineMarkEmailUnread className="size-5" />
-            </a>
+            {Object.values(links).map((link => (
+              <ConfirmButton key={link[0]} url={link} />)))}
           </div>
           <div className="text-slate-500 text-sm my-4">Blog Since 2023</div>
         </div>
