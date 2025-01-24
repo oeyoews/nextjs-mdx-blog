@@ -1,4 +1,4 @@
-import { Config } from 'tailwindcss';
+// import { Config } from 'tailwindcss';
 // const { iconsPlugin, getIconCollections } = require("@egoist/tailwindcss-icons")
 import {iconsPlugin, getIconCollections} from '@egoist/tailwindcss-icons'
 
@@ -62,4 +62,4 @@ export default {
       collections: getIconCollections(["lucide"]),
     }),
   ]
-} satisfies Config;
+}
