@@ -27,7 +27,7 @@ export default function Nav() {
   return (
     <div
       className={clsx(
-        'flex items-center justify-between print:hidden mb-8 sticky top-0 left-0 z-[1000] backdrop-blur-sm p-4 mx-auto px-2 md:px-16 w-full',
+        'flex items-center justify-between print:hidden mb-8 sticky top-0 left-0 z-1000 backdrop-blur-xs p-4 mx-auto px-2 md:px-16 w-full',
         (isFullScreen || !hasNav) && 'hidden'
       )}
     >

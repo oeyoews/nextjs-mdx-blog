@@ -64,7 +64,7 @@ function newContainer(label: string) {
     render: function (tokens, idx) {
       if (tokens[idx].nesting === 1) {
         return (
-          `<div class="flex justify-between rounded p-6 text-base my-8 dark:bg-[#2d333b] bg-transparent border-[#d0d7de] dark:border-[#444c56] border border-solid overflow-auto">\n` +
+          `<div class="flex justify-between rounded-sm p-6 text-base my-8 dark:bg-[#2d333b] bg-transparent border-[#d0d7de] dark:border-[#444c56] border border-solid overflow-auto">\n` +
           `<div class="flex items-center w-4 mr-4">${label}</div>` +
           `<div class="w-full">`
         );

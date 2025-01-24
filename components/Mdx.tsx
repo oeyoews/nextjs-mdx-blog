@@ -45,7 +45,7 @@ const Callout = ({
   type: bqtypes;
 }) => {
   return (
-    <div className="flex justify-between rounded p-2 text-base my-8 dark:bg-[#2d333b] bg-transparent border-[#d0d7de] dark:border-[#444c56] border border-solid overflow-auto dark:text-[#cdd9e5]">
+    <div className="flex justify-between rounded-sm p-2 text-base my-8 dark:bg-[#2d333b] bg-transparent border-[#d0d7de] dark:border-[#444c56] border border-solid overflow-auto dark:text-[#cdd9e5]">
       <div className="flex items-center w-4 mr-4">
         {React.cloneElement(calloutTypes[type].icon, {
           className: calloutTypes[type].className + ' size-5'

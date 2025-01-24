@@ -49,7 +49,7 @@ export default function LoadMore({ data }: { data: any[] }) {
   if (data.length <= list) {
     return (
       <Timeline.Li>
-        <button className="text-sm font-medium rounded px-2 font-mono py-1 text-gray-400 hover:text-gray-300 transition-all">
+        <button className="text-sm font-medium rounded-sm px-2 font-mono py-1 text-gray-400 hover:text-gray-300 transition-all">
           到底啦
         </button>
       </Timeline.Li>
@@ -60,7 +60,7 @@ export default function LoadMore({ data }: { data: any[] }) {
     <Timeline.Li>
       <button
         onClick={handleLoadItems}
-        className="text-sm font-medium rounded px-2 font-mono py-1 text-gray-400 hover:text-gray-300 transition-all"
+        className="text-sm font-medium rounded-sm px-2 font-mono py-1 text-gray-400 hover:text-gray-300 transition-all"
       >
         <FaArrowDown className="w-3" /> 加载更多文章
       </button>

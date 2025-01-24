@@ -57,7 +57,7 @@ export default async function Page(props: { params: Promise<Params> }) {
           width={1200}
           height={480}
           className={clsx(
-            'rounded-xl object-cover object-center aspect-video h-48 shadow'
+            'rounded-xl object-cover object-center aspect-video h-48 shadow-sm'
           )}
         />
       )}

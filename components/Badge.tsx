@@ -10,7 +10,7 @@ export default function Badge({
   return (
     <sup
       className={clsx(
-        'rounded-sm text-xs px-1 mx-1 font-light inline-flex text-black dark:text-white',
+        'rounded-xs text-xs px-1 mx-1 font-light inline-flex text-black dark:text-white',
         className
       )}
     >
