@@ -30,7 +30,7 @@ export default function Meteors() {
 						animationDuration: getRandomDuration(),
 					}}
 				>
-					<div className="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent" />
+					<div className="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-linear-to-r from-slate-500 to-transparent" />
 				</span>
 			</div>
 		));

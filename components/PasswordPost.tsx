@@ -45,7 +45,7 @@ function PasswordProtectedContent({
           <label>
             <input
               type='password'
-              className='border-none rounded p-2 focus:outline-none mx-2'
+              className='border-none rounded-sm p-2 focus:outline-hidden mx-2'
               placeholder='password'
               autoFocus
               onChange={(e) => setEnteredPassword(e.target.value)}
