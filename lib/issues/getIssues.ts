@@ -19,7 +19,9 @@ export default async function getIssues(page = 1): Promise<Issue[]> {
   const res = await fetch({
     url: `/issues?page=${page}&per_page=30&state=closed`,
     options: {
-      headers
+      headers, next: {
+        revalidate: 60
+      }
     }
   });
   const data = await res.json();

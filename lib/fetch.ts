@@ -9,17 +9,15 @@ const customFetch = (
 ): Promise<Response> => {
   const defaultOptions: RequestInit = {
     mode: 'cors',
-    next: { revalidate: 3600 },
+    next: { revalidate: 3600 }, // 1 hour
     headers: { 'Content-Type': 'application/json' }
   };
   const mergedOptions: RequestInit = { ...defaultOptions, ...options };
   return fetch(finalURL, mergedOptions);
 };
 
-export const create = (baseURL: string) => {
-  return function (config: Config) {
-    const { url, options } = config;
-    const finalURL = url ? baseURL + url : baseURL;
-    return customFetch(finalURL, options);
-  };
-};
+export const create = (baseURL: string) => (config: Config) => {
+  const { url, options } = config;
+  const finalURL = url ? baseURL + url : baseURL;
+  return customFetch(finalURL, options);
+}
