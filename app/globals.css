@@ -130,3 +130,7 @@ table svg {
 .animate-meteor {
   animation: meteor 5s linear infinite;
 }
+
+pre {
+  padding: 0 !important
+}
